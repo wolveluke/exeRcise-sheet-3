@@ -48,8 +48,19 @@ c)  For all of the following tasks in this exercise sheet we ask you to
 
 d)  Name 2 strengths and 2 weaknesses of git. (Don't forget to create a
     commit after this answer, see *1c*)
+#### Strengths
+- When collaborating on a project, using git makes it easy to share files and 
+keep track of changes.
+- Another benefit is the ability to have a history of your files, which lets you 
+revert changes and minimizes the risk of losing work.
+
+#### Weaknesses 
+- A potential weakness is that you have to explicitely use git, as opposed to it 
+being something that you set up once and forget about.
+- Git also only really works well on text files.
+    
 e)  Knit this exercise sheet. Some new files will automatically be
-    generated when knitting the sheet e.g. the HTML page. Ignore these
+    generated when knitting the sheet e.g. the HTML page. Ignore these
     files, as we only want to track the source files themselves. You
     can, but don't need to create a `.gitignore` file. Just do not
     commit these files manually.
