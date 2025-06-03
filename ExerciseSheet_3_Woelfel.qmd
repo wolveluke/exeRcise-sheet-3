@@ -97,6 +97,27 @@ a)  Load the `pixar_films` dataset into R. Clean the dataset by removing
     films without a title. Inspect the variable `film_rating`. What are
     the possible values and what do they mean? Create a factor variable
     for the film rating. Why is this appropriate?
+    
+```{r}
+library(tidyverse)
+pixar_films <- read_csv("pixar_films.csv")
+
+pixar_films <- pixar_films %>% drop_na(film)
+```
+- The `film_rating` variable tracks which audiences a film is considered appropriate 
+for using categories defined by the "Motion Picture Association film rating system".
+- This system has a total of five categories although it appears the Pixar films 
+are either "G" or "PG" rated. 
+- These ratings mean General Audiences, i.e. considered suitable for all ages and 
+Parental Guidance Suggested, i.e. some parts may not be suitable for young children.
+
+```{r}
+# assuming "create a variable" means converting, because I don't see a reason to 
+# create a new column
+pixar_films <- pixar_films %>% mutate(film_rating = as_factor(film_rating))
+```
+- Creating a factor variable is appropriate, because there are only five possible 
+values this variable can take.
 
 <!-- -->
 
