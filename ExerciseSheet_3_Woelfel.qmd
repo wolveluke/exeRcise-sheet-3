@@ -100,7 +100,7 @@ a)  Load the `pixar_films` dataset into R. Clean the dataset by removing
     
 ```{r}
 library(tidyverse)
-pixar_films <- read_csv("pixar_films.csv")
+pixar_films <- read_csv("data/pixar_films.csv")
 
 pixar_films <- pixar_films %>% drop_na(film)
 ```
@@ -155,6 +155,24 @@ c)  Load the `public_response` dataframe into R. Convert the
     levels are defined in ascending order, from the lowest to the
     highest score. Combine `public_response` with the `pixar_films`
     dataset using an appropriate merge variable.
+    
+```{r}
+public_response <- read_csv("data/public_response.csv")
+
+score_levels <- c("A+", "A", "A-")
+
+public_response <- public_response %>% 
+  mutate(cinema_score = as.factor(cinema_score),
+         cinema_score = fct_relevel(cinema_score, 
+                                    score_levels))
+  
+levels(public_response$cinema_score)
+
+films_combined <- left_join(pixar_films_series, 
+                            public_response, 
+                            by = "film")
+```
+    
 
 d)  Choose one of the variables representing the public response and
     create a bar plot for the films belonging to a series. Here are the
