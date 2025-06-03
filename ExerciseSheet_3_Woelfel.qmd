@@ -48,6 +48,7 @@ c)  For all of the following tasks in this exercise sheet we ask you to
 
 d)  Name 2 strengths and 2 weaknesses of git. (Don't forget to create a
     commit after this answer, see *1c*)
+    
 #### Strengths
 - When collaborating on a project, using git makes it easy to share files and 
 keep track of changes.
@@ -73,6 +74,9 @@ a)  Create a new repository on GitHub in your account named
     `exeRcise-sheet-3`. Make sure you create a **public repository** so
     we are able to see it for grading. Add the link to the repository
     below:
+    
+    <https://github.com/wolveluke/exeRcise-sheet-3>
+    
 b)  Push your code to this new repository by copying and executing the
     snippet on github listed under
     `…or push an existing repository from the command line`.
