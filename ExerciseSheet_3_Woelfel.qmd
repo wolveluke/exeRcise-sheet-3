@@ -286,6 +286,25 @@ f)  Create a meaningful plot / figure with the dataset. Make sure to
     provide a figure caption (via the chunk options / Rmarkdown) and
     correctly label the figure.
 
+```{r}
+#| label: fig-obesity_chart
+#| fig-cap: "Line chart showing the growing trend of obesity on a global scale."
+#| fig-width: 10
+#| fig-heigth: 5
+obesity_chart <- obesity %>% 
+  ggplot(aes(x = Year,
+             y = obesity_percentage_adults,
+             colour = Entity)) +
+  geom_line() + 
+  geom_point() +
+  labs(x = "Year",
+       y = "Percentage",
+       colour = "Region",
+       title = "Prevalence of Obesity in Adults by Region from 1975 to 2014")
+obesity_chart
+```
+
+
 ## Final Note
 
 Make sure to push all your commits and changes to GitHub before
