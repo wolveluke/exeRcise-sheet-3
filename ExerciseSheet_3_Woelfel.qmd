@@ -251,6 +251,12 @@ And while expiring patents will likely reduce prices, it might still be too much
 in developing countries. If obesity is on the rise at a problematic rate across the 
 whole world, it may be worth looking into regulating the price of these drugs, so that 
 everyone, not just those who are lucky enough to live in a rich country, may benefit.
+=======
+[^1]: I believe the requirement to keep it within one sentence is unreasonable, 
+which is why I will interpret this as keeping it simple.
+
+Obesity has long been on the 
+
     
 e)  Use R to answer your chosen question. Please limit your analysis to
     the functions and techniques we have covered so far in the course.
