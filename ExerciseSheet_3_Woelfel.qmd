@@ -251,6 +251,7 @@ in developing countries. If obesity is on the rise at a problematic rate across 
 whole world, it may be worth looking into regulating the price of these drugs, so that 
 everyone, not just those who are lucky enough to live in a rich country, may benefit.
     
+    
 e)  Use R to answer your chosen question. Please limit your analysis to
     the functions and techniques we have covered so far in the course.
     You are **not expected** to use advanced statistical models or
