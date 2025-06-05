@@ -209,7 +209,6 @@ ggplot(films_plot_data,
        y = "Metacritic Score",
        fill = "Film Title",
        title = "Metacritic score of Pixar films in a film series")
-
 ```
 
 - A comparison of the ratings of the films in a series shows that the second film 
