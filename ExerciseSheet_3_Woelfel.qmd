@@ -188,6 +188,32 @@ d)  Choose one of the variables representing the public response and
 
     What do you notice when comparing the scores of the films in a
     series? Do you see any patterns?
+    
+```{r}
+# selecting relevant films and making sure they are ordered correctly
+films_plot_data <- films_combined %>% 
+  filter(series != "none") %>% 
+  mutate(release_date = ymd(release_date)) %>% 
+  group_by(series) %>% 
+  mutate(film = factor(film, levels = film[order(release_date)])) %>% 
+  ungroup()
+
+ggplot(films_plot_data,
+       aes(x = series, 
+           fill = film, 
+           y = metacritic)) + 
+  geom_bar(position = "dodge",
+           stat = "identity") +
+  coord_cartesian(ylim = c(0,100)) +
+  labs(x = "Film Series",
+       y = "Metacritic Score",
+       fill = "Film Title",
+       title = "Metacritic score of Pixar films in a film series")
+
+```
+
+- A comparison of the ratings of the films in a series shows that the second film 
+is rated lower than the first across all series.
 
 ## Exercise 4: Open Analysis (4 points)
 
