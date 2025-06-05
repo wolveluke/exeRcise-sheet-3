@@ -159,7 +159,7 @@ c)  Load the `public_response` dataframe into R. Convert the
 ```{r}
 public_response <- read_csv("data/public_response.csv")
 
-score_levels <- c("A+", "A", "A-")
+score_levels <- c("A-", "A", "A+")
 
 public_response <- public_response %>% 
   mutate(cinema_score = as.factor(cinema_score),
@@ -250,6 +250,7 @@ And while expiring patents will likely reduce prices, it might still be too much
 in developing countries. If obesity is on the rise at a problematic rate across the 
 whole world, it may be worth looking into regulating the price of these drugs, so that 
 everyone, not just those who are lucky enough to live in a rich country, may benefit.
+    
     
 e)  Use R to answer your chosen question. Please limit your analysis to
     the functions and techniques we have covered so far in the course.
