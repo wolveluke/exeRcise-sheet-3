@@ -256,6 +256,32 @@ e)  Use R to answer your chosen question. Please limit your analysis to
     the functions and techniques we have covered so far in the course.
     You are **not expected** to use advanced statistical models or
     external packages which haven't been introduced.
+    
+```{r}
+obesity <- read_csv("data/Adult obesity by region - FAO (2017).csv")
+
+obesity <- obesity %>% 
+  rename("obesity_percentage_adults" = "Prevalence of obesity in adults (18+ years old) (FAO (2017))")
+
+obesity %>% 
+  group_by(Entity) %>% 
+  mutate(pct_change = (obesity_percentage_adults/lag(obesity_percentage_adults)-1)*100,
+         mean_change_recent = mean(pct_change[Year>2009])) %>% 
+  filter(Year == 2014) %>% 
+  select(Entity, Year, obesity_percentage_adults, mean_change_recent) %>% 
+  knitr::kable(col.names = c("Region",
+                             "Most Recent Year",
+                             "Percentage of obesity in adult population",
+                             "Average increase over the last 5 years"),
+               digits = 2) 
+  
+```
+As expected, this brief overview shows relatively high obesity in the "Western world".
+However the rates of obesity in Latin America and the Carribean are also quite high and 
+while Asia has the lowest absolute percentage, they have the highest percentage increase 
+between 2010 and 2014. This trend will be visualized using a line chart in the next 
+subtask.
+    
 f)  Create a meaningful plot / figure with the dataset. Make sure to
     provide a figure caption (via the chunk options / Rmarkdown) and
     correctly label the figure.
