@@ -234,6 +234,24 @@ d)  Come up with a (research) question you want to answer with the data
     and briefly explain why you believe this is an interesting question
     within one sentence. It should be a question that can be answered
     with the dataset and using R.
+    
+#### Research Question
+How much is obesity increasing across different regions of the world?
+
+#### Motivation[^1]
+[^1]: I believe the requirement to keep it within one sentence is unreasonable, which
+is why I will try to keep it simple instead.
+
+Obesity has been increasing across developed countries for a while and has become 
+one of the leading risk factors of disease and death. Putting discussions of personal 
+responsibility aside, on a population level it is certainly reasonable to treat obesity
+as a disease and with the advent of drugs like ozempic, it might be entirely curable soon.
+Even though these drugs are not particularly expensive to produce, they are very expensive to buy.
+And while expiring patents will likely reduce prices, it might still be too much for people 
+in developing countries. If obesity is on the rise at a problematic rate across the 
+whole world, it may be worth looking into regulating the price of these drugs, so that 
+everyone, not just those who are lucky enough to live in a rich country, may benefit.
+    
 e)  Use R to answer your chosen question. Please limit your analysis to
     the functions and techniques we have covered so far in the course.
     You are **not expected** to use advanced statistical models or
